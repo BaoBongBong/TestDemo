@@ -3,9 +3,9 @@ import React from "react";
 class AddUserInfor extends React.Component {
 
     state = {
-        name: 'NNN',
-        address: 'HCM',
-        age: '26'
+        name: '',
+        address: '',
+        age: ''
     }
 
     handleOnchange = (event) => {
