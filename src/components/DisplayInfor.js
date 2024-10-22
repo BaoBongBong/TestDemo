@@ -1,13 +1,34 @@
 import React from "react";
 import './displayinfor.scss';
-import logo from './../logo.svg';
+// import logo from './../logo.svg';
 class DisplayInfor extends React.Component {
 
-    state = {
-        isshowListUser: true
+    constructor(props) {
+        console.log(">>> call component: 1")
+        super(props);
+        this.state = {
+            isshowListUser: true
+        }
     }
+    // state = {
+    //     isshowListUser: true
+    // }
 
+    componentDidMount() {
+        console.log('>>>>> call me component did mount')
 
+        setTimeout(() => {
+            document.title = 'Eric&Hoi Dan IT'
+        }, 3000)
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log("call me component did update", this.props, prevProps)
+        if (this.props.listUser !== prevProps.listUser) {
+            if (this.props.listUser.length === 5) {
+                alert('you got 5 user')
+            }
+        }
+    }
 
     hanldeShowHide = () => {
         this.setState({
@@ -16,7 +37,7 @@ class DisplayInfor extends React.Component {
     }
 
     render() {
-
+        console.log('call me render: ')
         //props
         //destructuring
         const { listUser } = this.props; //object
