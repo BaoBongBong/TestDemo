@@ -5,7 +5,7 @@ import { Outlet, Link } from 'react-router-dom';
 const App = () => {
   return (
     <div className="app-container">
-      <div className='Header-container'>
+      <div className='header-container'>
 
         <Header />
       </div>
