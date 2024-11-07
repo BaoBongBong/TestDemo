@@ -13,6 +13,8 @@ import sidebarBg from '../../assets/bg2.jpg';
 import { AiOutlineUser } from "react-icons/ai";
 import { MdDashboard } from "react-icons/md";
 
+import './sideBar.scss'
+
 const SideBar = (props) => {
     const { image, collapsed, toggled, handleToggleSidebar } = props;
     return (
@@ -70,7 +72,7 @@ const SideBar = (props) => {
                     }}
                 >
                     <a
-                        href="https://github.com/azouaoui-med/react-pro-sidebar"
+                        href="https://github.com/BaoBongBong/TestDemo"
                         target="_blank"
                         className="sidebar-btn"
                         rel="noopener noreferrer"
