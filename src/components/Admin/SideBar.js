@@ -8,8 +8,10 @@ import {
     SidebarFooter,
     SidebarContent,
 } from 'react-pro-sidebar';
-import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart } from 'react-icons/fa';
+import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart, FaDirections } from 'react-icons/fa';
 import sidebarBg from '../../assets/bg2.jpg';
+import { AiOutlineUser } from "react-icons/ai";
+import { MdDashboard } from "react-icons/md";
 
 const SideBar = (props) => {
     const { image, collapsed, toggled, handleToggleSidebar } = props;
@@ -34,28 +36,28 @@ const SideBar = (props) => {
                         whiteSpace: 'nowrap',
                     }}
                 >
-                    My First App
+                    <AiOutlineUser size={'3em'} color='00bfff' />
+                    <span>My First App</span>
                 </div>
             </SidebarHeader>
 
             <SidebarContent>
                 <Menu iconShape="circle">
                     <MenuItem
-                        icon={<FaTachometerAlt />}
-                        suffix={<span className="badge red">New</span>}
+                        icon={<MdDashboard />}
                     >
-                        dashboard
+                        Dashboard
                     </MenuItem>
                     <MenuItem icon={<FaGem />}> components</MenuItem>
                 </Menu>
                 <Menu iconShape="circle">
                     <SubMenu
-                        suffix={<span className="badge yellow">3</span>}
-                        icon={<FaRegLaughWink />}
+                        icon={<FaGem />}
+                        title="Features"
                     >
-                        <MenuItem> 1</MenuItem>
-                        <MenuItem>2</MenuItem>
-                        <MenuItem>3</MenuItem>
+                        <MenuItem>Quản lý Users</MenuItem>
+                        <MenuItem>Quản lý bài Quiz</MenuItem>
+                        <MenuItem>Quản lý câu hỏi</MenuItem>
                     </SubMenu>
                 </Menu>
             </SidebarContent>
