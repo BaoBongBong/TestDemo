@@ -39,7 +39,7 @@ const SideBar = (props) => {
                     }}
                 >
                     <AiOutlineUser size={'3em'} color='00bfff' />
-                    <span>My First App</span>
+                    <span>Quản Lý</span>
                 </div>
             </SidebarHeader>
 
