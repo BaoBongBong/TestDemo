@@ -1,23 +1,34 @@
 import ModalCreateUser from "./ModalCreateUser";
 import './ManageUser.scss'
+import { FaPlusCircle } from "react-icons/fa";
+import { useState } from "react";
 
 const ManageUser = (props) => {
+    const [showModalCreateUser, setShowModalCreateUser] = useState(false);
+
     return (
         <div className="manage-user-container">
             <div className="title">
-                manage user
+                Manage user
             </div>
             <div className="users-content">
-                <div>
-                    <button>
+                <div className="btn-add-new">
+                    <button
+                        className="btn btn-success"
+                        onClick={() => setShowModalCreateUser(true)}>
+                        <FaPlusCircle />
                         add new user
                     </button>
 
                 </div>
-                <div> table user
+                <div className="table-user-container">
+                    table user
 
                 </div>
-                <ModalCreateUser />
+                <ModalCreateUser
+                    show={showModalCreateUser}
+                    setShow={setShowModalCreateUser}
+                />
             </div>
         </div>
     )
