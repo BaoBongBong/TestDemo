@@ -1,0 +1,24 @@
+import axios from "../utils/axiosCustomize";
+
+const postCreateNewUser = (email, password, username, role, image) => {
+    //call api & submit data
+
+    // let data = {
+    //     email: email,
+    //     password: password,
+    //     username: username,
+    //     role: role,
+    //     userImage: image
+    // }
+    // console.log(data)
+
+    const data = new FormData();
+    data.append('email', email);
+    data.append('password', password);
+    data.append('username', username);
+    data.append('role', role);
+    data.append('userImage', image);
+
+    return axios.post('api/v1/participant', data);
+}
+export { postCreateNewUser }
